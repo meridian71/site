@@ -3,19 +3,19 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Meridian 71 — капитал для проектов от $35 млн | Astana</title>
-  <meta name="description" content="Meridian 71 — брокерский дом в Астане. Помогаем бизнесу привлекать финансирование от иностранных институциональных фондов: от первичного анализа до первого транша.">
+  <title>Cresaris Group — капитал для проектов от $35 млн | Astana</title>
+  <meta name="description" content="Cresaris Group — брокерский дом в Астане. Помогаем бизнесу привлекать финансирование от иностранных институциональных фондов: от первичного анализа до первого транша.">
   <meta name="theme-color" content="#0e1f19">
   <meta property="og:type" content="website">
   <meta property="og:locale" content="ru_RU">
-  <meta property="og:site_name" content="Meridian 71">
-  <meta property="og:title" content="Meridian 71 — маршрут капитала">
+  <meta property="og:site_name" content="Cresaris Group">
+  <meta property="og:title" content="Cresaris Group — маршрут капитала">
   <meta property="og:description" content="Соединяем проекты в Евразии с иностранными институциональными фондами. Целевой размер сделки — от $35 млн до $1,5 млрд.">
-  <meta property="og:url" content="https://meridian71.kz/">
-  <meta property="og:image" content="https://meridian71.kz/assets/og-image.png">
+  <meta property="og:url" content="https://cresaris.group/">
+  <meta property="og:image" content="https://cresaris.group/assets/og-image.png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
-  <meta property="og:image:alt" content="Meridian 71 — маршрут капитала">
+  <meta property="og:image:alt" content="Cresaris Group — маршрут капитала">
   <meta name="twitter:card" content="summary_large_image">
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
   <link rel="preload" href="assets/fonts.css" as="style">
@@ -23,7 +23,7 @@
   <link rel="stylesheet" href="assets/styles.css">
   <script>document.documentElement.classList.add('js');</script>
 </head>
-<body id="top">
+<body id="top" data-page="home">
   <svg class="svg-sprite" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
     <symbol id="icon-arrow" viewBox="0 0 24 24"><path d="M7 17 17 7"/><path d="M7 7h10v10"/></symbol>
     <symbol id="icon-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7.5"/><path d="m20.5 20.5-4.2-4.2"/></symbol>
@@ -50,7 +50,7 @@
 
   <header class="site-header" id="site-header">
     <div class="container header-inner">
-      <a class="brand" href="#top" aria-label="Meridian 71 — на главную">
+      <a class="brand" href="#top" aria-label="Cresaris Group — на главную" data-i18n-aria-label="nav.home">
         <svg class="brand-mark" viewBox="0 0 32 32" aria-hidden="true">
           <circle cx="16" cy="16" r="14.5" fill="none" stroke="currentColor" stroke-width="1"/>
           <ellipse cx="16" cy="16" rx="7.2" ry="14.5" fill="none" stroke="currentColor" stroke-width="1" opacity=".45"/>
@@ -58,12 +58,12 @@
           <circle cx="23.5" cy="8.5" r="1.8" fill="currentColor"/>
         </svg>
         <span class="brand-text">
-          <span class="brand-name">MERIDIAN <b>71</b></span>
-          <span class="brand-sub">CAPITAL</span>
+          <span class="brand-name">CRESARIS</span>
+          <span class="brand-sub">GROUP</span>
         </span>
       </a>
 
-      <nav class="site-nav" aria-label="Основная навигация">
+      <nav class="site-nav" aria-label="Основная навигация" data-i18n-aria-label="nav.main">
         <a href="#practice">Практика</a>
         <a href="#terms">Условия</a>
         <a href="#process">Процесс</a>
@@ -72,12 +72,19 @@
         <a href="#faq">Вопросы</a>
       </nav>
 
-      <a class="btn btn-small header-cta" href="#contact">
-        <span>Обсудить проект</span>
-        <svg class="icon" aria-hidden="true"><use href="#icon-arrow"></use></svg>
-      </a>
+      <div class="header-tools">
+        <div class="lang-switch" role="group" aria-label="Язык сайта" data-i18n-skip>
+          <button type="button" class="lang-btn is-active" data-lang="ru" aria-pressed="true" lang="ru">RU</button>
+          <button type="button" class="lang-btn" data-lang="en" aria-pressed="false" lang="en">EN</button>
+          <button type="button" class="lang-btn" data-lang="kk" aria-pressed="false" lang="kk">KZ</button>
+        </div>
+        <a class="btn btn-small header-cta" href="#contact">
+          <span>Обсудить проект</span>
+          <svg class="icon" aria-hidden="true"><use href="#icon-arrow"></use></svg>
+        </a>
+      </div>
 
-      <button class="menu-toggle" type="button" aria-label="Открыть меню" aria-expanded="false" aria-controls="mobile-menu">
+      <button class="menu-toggle" type="button" aria-label="Открыть меню" aria-expanded="false" aria-controls="mobile-menu" data-i18n-aria-label="nav.open">
         <span></span><span></span>
       </button>
     </div>
@@ -86,7 +93,7 @@
   <div class="mobile-menu" id="mobile-menu" aria-hidden="true">
     <div class="mobile-menu-inner">
       <p class="mobile-menu-label">Навигация</p>
-      <nav class="mobile-nav" aria-label="Мобильная навигация">
+      <nav class="mobile-nav" aria-label="Мобильная навигация" data-i18n-aria-label="nav.mobile">
         <a href="#practice"><span>01</span>Практика</a>
         <a href="#terms"><span>02</span>Условия</a>
         <a href="#process"><span>03</span>Процесс</a>
@@ -113,8 +120,8 @@
       <div class="container hero-grid">
         <div class="hero-copy">
           <p class="eyebrow eyebrow-light reveal">Astana · AIFC · Cross-border capital</p>
-          <h1 class="hero-title reveal" id="hero-title" style="--d:.08s">Прокладываем <em>маршрут</em> капитала.</h1>
-          <p class="hero-lede reveal" style="--d:.16s">Meridian 71 — брокерский дом, который соединяет бизнес с иностранными институциональными фондами. От первичного анализа до первого транша.</p>
+          <h1 class="hero-title reveal" id="hero-title" style="--d:.08s" data-i18n-html="home.hero.title">Прокладываем <em>маршрут</em> капитала.</h1>
+          <p class="hero-lede reveal" style="--d:.16s">Cresaris Group — брокерский дом, который соединяет бизнес с иностранными институциональными фондами. От первичного анализа до первого транша.</p>
           <div class="hero-actions reveal" style="--d:.24s">
             <a class="btn btn-brass" href="#contact">
               <span>Обсудить проект</span>
@@ -131,7 +138,7 @@
           </p>
         </div>
 
-        <figure class="route-card reveal" style="--d:.2s" data-route-card aria-label="Интерактивный глобус маршрутов капитала: Астана, Москва, Лондон, Франкфурт, Дубай и Сингапур">
+        <figure class="route-card reveal" style="--d:.2s" data-route-card aria-label="Интерактивный глобус маршрутов капитала: Астана, Москва, Лондон, Гонконг, Франкфурт, Дубай и Сингапур" data-i18n-aria-label="home.globe.aria">
           <div class="route-meta">
             <span>Capital routes</span>
             <span class="route-time">Astana <time data-astana-time>--:--</time></span>
@@ -171,6 +178,7 @@
                   <path d="M300 300 C 370 360 430 420 460 470"/>
                   <path d="M300 300 C 230 360 180 420 150 460"/>
                   <path d="M300 300 C 292 240 287 180 285 120"/>
+                  <path d="M300 300 C 372 318 452 354 520 392"/>
                 </g>
                 <g class="route-node">
                   <circle cx="120" cy="120" r="4"/>
@@ -178,6 +186,7 @@
                   <circle cx="460" cy="470" r="4"/>
                   <circle cx="150" cy="460" r="4"/>
                   <circle cx="285" cy="120" r="4"/>
+                  <circle cx="520" cy="392" r="4"/>
                 </g>
                 <circle class="route-center-pulse" cx="300" cy="300" r="18"/>
                 <circle class="route-center" cx="300" cy="300" r="5"/>
@@ -187,6 +196,7 @@
                   <text x="474" y="132" text-anchor="middle">FRANKFURT</text>
                   <text x="464" y="495" text-anchor="middle">DUBAI</text>
                   <text x="148" y="485" text-anchor="middle">SINGAPORE</text>
+                  <text x="520" y="418" text-anchor="middle">HONG KONG</text>
                   <text x="285" y="100" text-anchor="middle">MOSCOW</text>
                   <text x="318" y="330" text-anchor="start" class="route-label-astana">ASTANA</text>
                 </g>
@@ -238,6 +248,7 @@
         <span>Astana</span><i></i>
         <span>Moscow</span><i></i>
         <span>London</span><i></i>
+        <span>Hong Kong</span><i></i>
         <span>Dubai</span><i></i>
         <span>Singapore</span><i></i>
         <span>Institutional capital</span><i></i>
@@ -247,6 +258,7 @@
         <span>Astana</span><i></i>
         <span>Moscow</span><i></i>
         <span>London</span><i></i>
+        <span>Hong Kong</span><i></i>
         <span>Dubai</span><i></i>
         <span>Singapore</span><i></i>
       </div>
@@ -256,15 +268,15 @@
       <div class="container">
         <div class="section-head about-head">
           <p class="eyebrow reveal"><span>01</span> Позиция</p>
-          <h2 class="display reveal" style="--d:.06s">Мы не обещаем капитал.<br>Мы делаем проект <em>к нему готовым.</em></h2>
+          <h2 class="display reveal" style="--d:.06s" data-i18n-html="home.about.title">Мы не обещаем капитал.<br>Мы делаем проект <em>к нему готовым.</em></h2>
         </div>
         <div class="about-grid">
           <div class="about-copy reveal" style="--d:.1s">
             <p class="lede">Институциональный инвестор видит тысячи проектов. До инвестиционного комитета доходят единицы. Наша работа — сократить этот путь и снять вопросы, которые обычно остаются без ответа.</p>
-            <p>Meridian 71 работает на стороне проекта: проверяет экономику, собирает структуру, готовит data room и ведёт сделку до закрытия. Мы не заменяем фонд и не принимаем инвестиционное решение — мы делаем так, чтобы это решение стало возможным.</p>
+            <p>Cresaris Group работает на стороне проекта: проверяет экономику, собирает структуру, готовит data room и ведёт сделку до закрытия. Мы не заменяем фонд и не принимаем инвестиционное решение — мы делаем так, чтобы это решение стало возможным.</p>
             <a class="text-link" href="#process">Посмотреть процесс <svg class="icon" aria-hidden="true"><use href="#icon-arrow"></use></svg></a>
           </div>
-          <aside class="about-facts reveal" style="--d:.16s" aria-label="Ключевые факты">
+          <aside class="about-facts reveal" style="--d:.16s" aria-label="Ключевые факты" data-i18n-aria-label="home.about.factsAria">
             <div class="fact">
               <span class="fact-label">Фокус</span>
               <span class="fact-value">Сделки от $35 млн</span>
@@ -275,7 +287,7 @@
             </div>
             <div class="fact">
               <span class="fact-label">Языки</span>
-              <span class="fact-value">Русский · English</span>
+              <span class="fact-value">Русский · Қазақша · English</span>
             </div>
             <div class="fact">
               <span class="fact-label">Принцип</span>
@@ -285,7 +297,7 @@
         </div>
         <blockquote class="pull-quote reveal">
           <p>«Капитал приходит туда, где снижена неопределённость».</p>
-          <cite>Meridian 71 · Investment philosophy</cite>
+          <cite>Cresaris Group · Investment philosophy</cite>
         </blockquote>
       </div>
     </section>
@@ -295,7 +307,7 @@
         <div class="section-head split">
           <div>
             <p class="eyebrow reveal"><span>02</span> Практика</p>
-            <h2 class="display reveal" style="--d:.06s">От идеи до транша — <em>шесть функций.</em></h2>
+            <h2 class="display reveal" style="--d:.06s" data-i18n-html="home.practice.title">От идеи до транша — <em>шесть функций.</em></h2>
           </div>
           <p class="section-intro reveal" style="--d:.12s">Закрываем разрыв между проектом и требованиями институционального инвестора. Работаем как внешний investment desk — до, во время и после сделки.</p>
         </div>
@@ -363,7 +375,7 @@
         <div class="section-head split">
           <div>
             <p class="eyebrow eyebrow-light reveal"><span>03</span> Рамка</p>
-            <h2 class="display light reveal" style="--d:.06s">Структура, которую <em>понимает инвестор.</em></h2>
+            <h2 class="display light reveal" style="--d:.06s" data-i18n-html="home.terms.title">Структура, которую <em>понимает инвестор.</em></h2>
           </div>
           <p class="section-intro light reveal" style="--d:.12s">Ориентировочные параметры рамочной сделки. Финальные условия фиксируются в term sheet после due diligence и комплаенса.</p>
         </div>
@@ -407,7 +419,7 @@
             </div>
             <div>
               <dt>Комиссия за организацию</dt>
-              <dd>3% (EUR / USD)</dd>
+              <dd>3% (USD)</dd>
             </div>
             <div>
               <dt>Аванс на структурирование</dt>
@@ -416,7 +428,7 @@
           </dl>
         </div>
         <p class="disclaimer reveal">Параметры носят ориентировочный характер и не являются офертой. Сумма аванса, график, комиссии и обеспечительные условия зависят от масштаба и сложности сделки и раскрываются до подписания. Финансирование не гарантируется и предоставляется исключительно по решению инвестора.</p>
-        <span class="terms-watermark" aria-hidden="true">71</span>
+        <span class="terms-watermark" aria-hidden="true">CG</span>
       </div>
     </section>
 
@@ -425,7 +437,7 @@
         <div class="section-head split">
           <div>
             <p class="eyebrow reveal"><span>04</span> Процесс</p>
-            <h2 class="display reveal" style="--d:.06s">Пять шагов. <em>Один маршрут.</em></h2>
+            <h2 class="display reveal" style="--d:.06s" data-i18n-html="home.process.title">Пять шагов. <em>Один маршрут.</em></h2>
           </div>
           <p class="section-intro reveal" style="--d:.12s">Прозрачный процесс с понятными точками контроля. На каждом этапе вы знаете, что происходит, кто принимает решение и что нужно сделать дальше.</p>
         </div>
@@ -490,7 +502,7 @@
         <div class="section-head split">
           <div>
             <p class="eyebrow reveal"><span>05</span> Секторы</p>
-            <h2 class="display reveal" style="--d:.06s">Говорим на языке <em>инвестора.</em></h2>
+            <h2 class="display reveal" style="--d:.06s" data-i18n-html="home.sectors.title">Говорим на языке <em>инвестора.</em></h2>
           </div>
           <p class="section-intro reveal" style="--d:.12s">Фокусируемся на капиталоёмких проектах с понятной экономикой и спросом на международном рынке.</p>
         </div>
@@ -540,7 +552,7 @@
         <div class="jurisdiction-grid">
           <div class="jurisdiction-copy">
             <p class="eyebrow eyebrow-light reveal"><span>06</span> Юрисдикция</p>
-            <h2 class="display light reveal" style="--d:.06s">Астана — не периферия.<br><em>Это перекрёсток.</em></h2>
+            <h2 class="display light reveal" style="--d:.06s" data-i18n-html="home.jurisdiction.title">Астана — не периферия.<br><em>Это перекрёсток.</em></h2>
             <p class="lede light reveal" style="--d:.12s">Международный финансовый центр «Астана» работает по принципам английского права, с собственным судом и регулятором AFSA. Здесь встречаются капитал из Европы, Ближнего Востока и Азии и проекты Центральной Азии.</p>
             <p class="reveal" style="--d:.16s">Для инвестора это означает привычную правовую среду и понятную структуру сделки. Для проекта — доступ к международному капиталу без потери локальной экспертизы.</p>
             <div class="jurisdiction-links reveal" style="--d:.2s">
@@ -563,7 +575,7 @@
             </div>
           </div>
         </div>
-        <p class="source reveal">Источник: данные AIFC, конец 2025 года. Проверка лицензий и разрешённых видов деятельности контрагентов — в публичном реестре AFSA. Meridian 71 не является органом AIFC.</p>
+        <p class="source reveal">Источник: данные AIFC, конец 2025 года. Проверка лицензий и разрешённых видов деятельности контрагентов — в публичном реестре AFSA. Cresaris Group не является органом AIFC.</p>
       </div>
     </section>
 
@@ -571,7 +583,7 @@
       <div class="container">
         <div class="section-head who-head">
           <p class="eyebrow reveal"><span>07</span> Стороны сделки</p>
-          <h2 class="display reveal" style="--d:.06s">Две стороны. <em>Один интерес.</em></h2>
+          <h2 class="display reveal" style="--d:.06s" data-i18n-html="home.who.title">Две стороны. <em>Один интерес.</em></h2>
         </div>
         <div class="who-grid">
           <article class="who-card reveal">
@@ -600,63 +612,11 @@
         <div class="fund-pool reveal" aria-labelledby="fund-pool-title">
           <div class="fund-pool-head">
             <div>
-              <p class="mono-label">Candidate fund pool</p>
-              <h3 id="fund-pool-title">45 фондов и управляющих</h3>
-              <p>Кандидатный пул для сделок в Евразии: глобальные институты, региональные управляющие и локальные команды.</p>
+              <p class="mono-label">Финансирование</p>
+              <h3 id="fund-pool-title" data-i18n-html="home.funds.title">Международные фонды</h3>
+              <p>Работаем с международными фондами и институциональными инвесторами. Состав пула формируется под каждую сделку.</p>
             </div>
-            <span class="fund-pool-badge" aria-hidden="true">45</span>
           </div>
-          <div class="fund-list-wrap" tabindex="0" role="region" aria-label="Список 45 фондов и управляющих" aria-describedby="fund-list-hint">
-            <ol class="fund-list">
-              <li><span class="fund-num">01</span><span class="fund-name">Mapletree Investments</span></li>
-              <li><span class="fund-num">02</span><span class="fund-name">Allianz Global Investors</span></li>
-              <li><span class="fund-num">03</span><span class="fund-name">CapitaLand Investment</span></li>
-              <li><span class="fund-num">04</span><span class="fund-name">HQ Trust</span></li>
-              <li><span class="fund-num">05</span><span class="fund-name">BayernInvest</span></li>
-              <li><span class="fund-num">06</span><span class="fund-name">Freedom Finance Global</span></li>
-              <li><span class="fund-num">07</span><span class="fund-name">Al Mal Capital</span></li>
-              <li><span class="fund-num">08</span><span class="fund-name">GIC Private Limited</span></li>
-              <li><span class="fund-num">09</span><span class="fund-name">Eastspring Investments</span></li>
-              <li><span class="fund-num">10</span><span class="fund-name">Phillip Capital</span></li>
-              <li><span class="fund-num">11</span><span class="fund-name">Helaba Invest</span></li>
-              <li><span class="fund-num">12</span><span class="fund-name">UD Capital</span></li>
-              <li><span class="fund-num">13</span><span class="fund-name">Shuaa Capital</span></li>
-              <li><span class="fund-num">14</span><span class="fund-name">Centras Securities</span></li>
-              <li><span class="fund-num">15</span><span class="fund-name">Berenberg</span></li>
-              <li><span class="fund-num">16</span><span class="fund-name">DWS Group</span></li>
-              <li><span class="fund-num">17</span><span class="fund-name">Deka Investment</span></li>
-              <li><span class="fund-num">18</span><span class="fund-name">APS Asset Management</span></li>
-              <li><span class="fund-num">19</span><span class="fund-name">Lion Global Investors</span></li>
-              <li><span class="fund-num">20</span><span class="fund-name">BCC Invest</span></li>
-              <li><span class="fund-num">21</span><span class="fund-name">ADQ</span></li>
-              <li><span class="fund-num">22</span><span class="fund-name">Halyk Finance</span></li>
-              <li><span class="fund-num">23</span><span class="fund-name">Bantleon</span></li>
-              <li><span class="fund-num">24</span><span class="fund-name">Lunate</span></li>
-              <li><span class="fund-num">25</span><span class="fund-name">SkyBridge Invest</span></li>
-              <li><span class="fund-num">26</span><span class="fund-name">UOB Asset Management</span></li>
-              <li><span class="fund-num">27</span><span class="fund-name">Fullerton Fund Management</span></li>
-              <li><span class="fund-num">28</span><span class="fund-name">Tansar Capital</span></li>
-              <li><span class="fund-num">29</span><span class="fund-name">MEAG</span></li>
-              <li><span class="fund-num">30</span><span class="fund-name">Emirates NBD Asset Management</span></li>
-              <li><span class="fund-num">31</span><span class="fund-name">Waha Capital</span></li>
-              <li><span class="fund-num">32</span><span class="fund-name">Gulf Capital</span></li>
-              <li><span class="fund-num">33</span><span class="fund-name">Abu Dhabi Investment Authority (ADIA)</span></li>
-              <li><span class="fund-num">34</span><span class="fund-name">Union Investment</span></li>
-              <li><span class="fund-num">35</span><span class="fund-name">Temasek Holdings</span></li>
-              <li><span class="fund-num">36</span><span class="fund-name">Keppel Capital</span></li>
-              <li><span class="fund-num">37</span><span class="fund-name">Daman Investments</span></li>
-              <li><span class="fund-num">38</span><span class="fund-name">Investment Corporation of Dubai (ICD)</span></li>
-              <li><span class="fund-num">39</span><span class="fund-name">Metzler Asset Management</span></li>
-              <li><span class="fund-num">40</span><span class="fund-name">Mubadala Investment Company</span></li>
-              <li><span class="fund-num">41</span><span class="fund-name">Mubadala Capital</span></li>
-              <li><span class="fund-num">42</span><span class="fund-name">Teniz Capital (AIFC) Ltd.</span></li>
-              <li><span class="fund-num">43</span><span class="fund-name">Flossbach von Storch</span></li>
-              <li><span class="fund-num">44</span><span class="fund-name">SY Investment Company</span></li>
-              <li><span class="fund-num">45</span><span class="fund-name">Standard International Market Ltd.</span></li>
-            </ol>
-          </div>
-          <p class="fund-list-hint" id="fund-list-hint">Прокрутите список, чтобы увидеть все 45 организаций.</p>
-          <p class="fund-disclaimer">Список носит информационный характер. Упоминание организации не означает партнёрство, аффилированность или доступ к капиталу. Все сделки проходят due diligence, KYC/AML и инвестиционный комитет.</p>
         </div>
       </div>
     </section>
@@ -665,7 +625,7 @@
       <div class="container faq-layout">
         <div class="faq-intro">
           <p class="eyebrow reveal"><span>08</span> Вопросы</p>
-          <h2 class="display reveal" style="--d:.06s">Коротко <em>о главном.</em></h2>
+          <h2 class="display reveal" style="--d:.06s" data-i18n-html="home.faq.title">Коротко <em>о главном.</em></h2>
           <p class="section-intro reveal" style="--d:.12s">Если вашего вопроса нет в списке, напишите нам. Ответим честно — даже если ответ «не подходит».</p>
         </div>
         <div class="faq-list">
@@ -687,7 +647,7 @@
           </details>
           <details class="faq-item reveal">
             <summary>Сколько стоит сопровождение?<span class="faq-icon" aria-hidden="true"></span></summary>
-            <div class="faq-answer"><p>Комиссия за организацию — 3% от суммы сделки (EUR/USD). Аванс на анализ и структурирование — от $50 000. Точные условия фиксируются в договоре; расходы на аудит и юридическое сопровождение обсуждаются отдельно.</p></div>
+            <div class="faq-answer"><p>Комиссия за организацию — 3% от суммы сделки (USD). Аванс на анализ и структурирование — от $50 000. Точные условия фиксируются в договоре; расходы на аудит и юридическое сопровождение обсуждаются отдельно.</p></div>
           </details>
           <details class="faq-item reveal">
             <summary>Сколько занимает сделка?<span class="faq-icon" aria-hidden="true"></span></summary>
@@ -695,7 +655,7 @@
           </details>
           <details class="faq-item reveal">
             <summary>Кто ваши инвесторы?<span class="faq-icon" aria-hidden="true"></span></summary>
-            <div class="faq-answer"><p>Иностранные институциональные фонды, family offices и private capital structures. Конкретный пул формируется под сделку; имена и мандаты раскрываются в процессе, в рамках NDA.</p></div>
+            <div class="faq-answer"><p>Международные фонды и институциональные инвесторы. Конкретный пул формируется под сделку; имена и мандаты раскрываются в процессе, в рамках NDA.</p></div>
           </details>
           <details class="faq-item reveal">
             <summary>Как обеспечивается конфиденциальность?<span class="faq-icon" aria-hidden="true"></span></summary>
@@ -709,7 +669,7 @@
       <div class="container contact-grid">
         <div class="contact-intro">
           <p class="eyebrow eyebrow-light reveal"><span>09</span> Контакт</p>
-          <h2 class="display light reveal" style="--d:.06s">Расскажите о проекте.<br><em>Начнём с главного.</em></h2>
+          <h2 class="display light reveal" style="--d:.06s" data-i18n-html="home.contact.title">Расскажите о проекте.<br><em>Начнём с главного.</em></h2>
           <p class="lede light reveal" style="--d:.12s">Коротко опишите проект и ожидаемую сумму. Мы вернёмся в течение двух рабочих дней и предложим следующий шаг.</p>
           <div class="contact-channels reveal" style="--d:.16s">
             <a href="mailto:invest.capital.center@gmail.com">
@@ -736,12 +696,12 @@
           <div class="field-row">
             <div class="field">
               <label for="name">Имя <span aria-hidden="true">*</span></label>
-              <input id="name" name="name" type="text" autocomplete="name" required placeholder="Как к вам обращаться">
+              <input id="name" name="name" type="text" autocomplete="name" required placeholder="Как к вам обращаться" data-i18n-placeholder="form.name.placeholder">
               <p class="field-error" id="name-error" aria-live="polite"></p>
             </div>
             <div class="field">
               <label for="company">Компания <span aria-hidden="true">*</span></label>
-              <input id="company" name="company" type="text" autocomplete="organization" required placeholder="Название компании">
+              <input id="company" name="company" type="text" autocomplete="organization" required placeholder="Название компании" data-i18n-placeholder="form.company.placeholder">
               <p class="field-error" id="company-error" aria-live="polite"></p>
             </div>
           </div>
@@ -788,11 +748,11 @@
           </div>
           <div class="field">
             <label for="message">О проекте</label>
-            <textarea id="message" name="message" rows="3" placeholder="Стадия, география, цель финансирования"></textarea>
+            <textarea id="message" name="message" rows="3" placeholder="Стадия, география, цель финансирования" data-i18n-placeholder="form.message.placeholder"></textarea>
           </div>
           <div class="consent">
             <input id="consent" name="consent" type="checkbox" required>
-            <label for="consent">Я согласен с <a href="privacy.html">политикой конфиденциальности</a> и обработкой данных для ответа на запрос.</label>
+            <label for="consent" data-i18n-html="form.consent">Я согласен с <a href="privacy.html">политикой конфиденциальности</a> и обработкой данных для ответа на запрос.</label>
           </div>
           <p class="field-error consent-error" id="consent-error" aria-live="polite"></p>
           <button class="btn btn-brass btn-submit" type="submit">
@@ -809,7 +769,7 @@
   <footer class="site-footer">
     <div class="container footer-top">
       <div class="footer-brand">
-        <a class="brand brand-footer" href="#top" aria-label="Meridian 71 — на главную">
+        <a class="brand brand-footer" href="#top" aria-label="Cresaris Group — на главную" data-i18n-aria-label="nav.home">
           <svg class="brand-mark" viewBox="0 0 32 32" aria-hidden="true">
             <circle cx="16" cy="16" r="14.5" fill="none" stroke="currentColor" stroke-width="1"/>
             <ellipse cx="16" cy="16" rx="7.2" ry="14.5" fill="none" stroke="currentColor" stroke-width="1" opacity=".45"/>
@@ -817,13 +777,13 @@
             <circle cx="23.5" cy="8.5" r="1.8" fill="currentColor"/>
           </svg>
           <span class="brand-text">
-            <span class="brand-name">MERIDIAN <b>71</b></span>
-            <span class="brand-sub">CAPITAL</span>
+            <span class="brand-name">CRESARIS</span>
+            <span class="brand-sub">GROUP</span>
           </span>
         </a>
-        <p class="footer-tagline">Cross-border capital.<br>Institutional discipline.</p>
+        <p class="footer-tagline" data-i18n-html="common.tagline">Cross-border capital.<br>Institutional discipline.</p>
       </div>
-      <nav class="footer-nav" aria-label="Навигация в подвале">
+      <nav class="footer-nav" aria-label="Навигация в подвале" data-i18n-aria-label="nav.footer">
         <div>
           <p class="footer-nav-title">Практика</p>
           <a href="#practice">Услуги</a>
@@ -845,18 +805,19 @@
       </nav>
     </div>
     <div class="container footer-bottom">
-      <p>© 2026 Meridian 71 Capital. Astana, Kazakhstan.</p>
+      <p>© 2026 Cresaris Group. Astana, Kazakhstan.</p>
       <div class="footer-legal-links">
         <a href="privacy.html">Политика конфиденциальности</a>
         <a href="terms.html">Правовая информация</a>
       </div>
     </div>
     <div class="container footer-disclaimer">
-      <p>Meridian 71 Capital не является инвестиционным фондом, банком или биржей. Информация на сайте не является офертой, инвестиционной рекомендацией или гарантией финансирования. Все сделки подлежат due diligence, KYC/AML и одобрению инвестора. Регуляторный статус компании и лицензии контрагентов раскрываются по запросу.</p>
+      <p>Cresaris Group не является инвестиционным фондом, банком или биржей. Информация на сайте не является офертой, инвестиционной рекомендацией или гарантией финансирования. Все сделки подлежат due diligence, KYC/AML и одобрению инвестора. Регуляторный статус компании и лицензии контрагентов раскрываются по запросу.</p>
     </div>
-    <div class="footer-wordmark" aria-hidden="true">MERIDIAN 71</div>
+    <div class="footer-wordmark" aria-hidden="true">CRESARIS</div>
   </footer>
 
+  <script src="assets/i18n.js"></script>
   <script src="assets/script.js"></script>
 </body>
 </html>
