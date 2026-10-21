@@ -4,6 +4,10 @@
   const doc = document;
   const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
+  const t = function (key, vars) {
+    return window.CresarisI18n ? window.CresarisI18n.t(key, vars) : key;
+  };
+
   const header = doc.getElementById("site-header");
   if (header) {
     const setScrolled = function () {
@@ -33,7 +37,7 @@
       mobileMenu.classList.add("is-open");
       mobileMenu.setAttribute("aria-hidden", "false");
       toggle.setAttribute("aria-expanded", "true");
-      toggle.setAttribute("aria-label", "Закрыть меню");
+      toggle.setAttribute("aria-label", t("nav.close"));
       const first = mobileMenu.querySelector("a");
       if (first) {
         window.requestAnimationFrame(function () {
@@ -48,7 +52,7 @@
       mobileMenu.setAttribute("aria-hidden", "true");
       if (supportsInert) mobileMenu.inert = true;
       toggle.setAttribute("aria-expanded", "false");
-      toggle.setAttribute("aria-label", "Открыть меню");
+      toggle.setAttribute("aria-label", t("nav.open"));
       if (lastFocus && typeof lastFocus.focus === "function") lastFocus.focus();
     };
 
@@ -89,6 +93,11 @@
 
     window.addEventListener("resize", function () {
       if (window.innerWidth > 1100 && doc.body.classList.contains("menu-open")) closeMenu();
+    });
+
+    doc.addEventListener("cresaris:languagechange", function () {
+      const labelKey = doc.body.classList.contains("menu-open") ? "nav.close" : "nav.open";
+      toggle.setAttribute("aria-label", t(labelKey));
     });
   }
 
@@ -162,12 +171,17 @@
 
   const clock = doc.querySelector("[data-astana-time]");
   if (clock) {
-    const formatter = new Intl.DateTimeFormat("ru-RU", {
-      timeZone: "Asia/Almaty",
-      hour: "2-digit",
-      minute: "2-digit",
-      hour12: false
-    });
+    const locales = { ru: "ru-RU", en: "en-GB", kk: "kk-KZ" };
+    const makeFormatter = function () {
+      const lang = window.CresarisI18n ? window.CresarisI18n.getLang() : "ru";
+      return new Intl.DateTimeFormat(locales[lang] || "ru-RU", {
+        timeZone: "Asia/Almaty",
+        hour: "2-digit",
+        minute: "2-digit",
+        hour12: false
+      });
+    };
+    let formatter = makeFormatter();
 
     const tick = function () {
       clock.textContent = formatter.format(new Date());
@@ -175,6 +189,11 @@
 
     tick();
     window.setInterval(tick, 30000);
+
+    doc.addEventListener("cresaris:languagechange", function () {
+      formatter = makeFormatter();
+      tick();
+    });
   }
 
   const hero = doc.querySelector(".hero");
@@ -216,6 +235,7 @@
       { id: "astana", label: "ASTANA", lat: 51.1694, lon: 71.4491, anchor: "start", dx: 12, dy: -12, hub: true },
       { id: "moscow", label: "MOSCOW", lat: 55.7558, lon: 37.6173, anchor: "middle", dx: 0, dy: -18 },
       { id: "london", label: "LONDON", lat: 51.5072, lon: -0.1276, anchor: "end", dx: -12, dy: 18 },
+      { id: "hongkong", label: "HONG KONG", lat: 22.3193, lon: 114.1694, anchor: "end", dx: -12, dy: -14 },
       { id: "frankfurt", label: "FRANKFURT", lat: 50.1109, lon: 8.6821, anchor: "start", dx: 12, dy: 22 },
       { id: "dubai", label: "DUBAI", lat: 25.2048, lon: 55.2708, anchor: "start", dx: 12, dy: 16 },
       { id: "singapore", label: "SINGAPORE", lat: 1.3521, lon: 103.8198, anchor: "end", dx: -12, dy: 18 }
@@ -567,6 +587,14 @@
       });
     });
 
+    doc.addEventListener("cresaris:languagechange", function () {
+      Object.keys(fields).forEach(clearFieldError);
+      if (status) {
+        status.textContent = "";
+        status.classList.remove("is-error");
+      }
+    });
+
     form.addEventListener("submit", function (event) {
       event.preventDefault();
 
@@ -583,45 +611,45 @@
 
       if (!name) {
         errors.push("name");
-        setFieldError("name", "Укажите имя.");
+        setFieldError("name", t("form.error.name"));
       } else {
         setFieldError("name", "");
       }
 
       if (!company) {
         errors.push("company");
-        setFieldError("company", "Укажите компанию.");
+        setFieldError("company", t("form.error.company"));
       } else {
         setFieldError("company", "");
       }
 
       if (!email) {
         errors.push("email");
-        setFieldError("email", "Укажите email.");
+        setFieldError("email", t("form.error.email.required"));
       } else if (!emailPattern.test(email)) {
         errors.push("email");
-        setFieldError("email", "Проверьте формат email.");
+        setFieldError("email", t("form.error.email.format"));
       } else {
         setFieldError("email", "");
       }
 
       if (!amount) {
         errors.push("amount");
-        setFieldError("amount", "Выберите диапазон суммы.");
+        setFieldError("amount", t("form.error.amount"));
       } else {
         setFieldError("amount", "");
       }
 
       if (!sector) {
         errors.push("sector");
-        setFieldError("sector", "Выберите сектор.");
+        setFieldError("sector", t("form.error.sector"));
       } else {
         setFieldError("sector", "");
       }
 
       if (!fields.consent.checked) {
         errors.push("consent");
-        setFieldError("consent", "Необходимо согласие на обработку данных.");
+        setFieldError("consent", t("form.error.consent"));
       } else {
         setFieldError("consent", "");
       }
@@ -629,7 +657,7 @@
       if (errors.length) {
         firstInvalid = fields[errors[0]];
         if (status) {
-          status.textContent = "Проверьте отмеченные поля.";
+          status.textContent = t("form.status.check");
           status.classList.add("is-error");
         }
         if (firstInvalid && typeof firstInvalid.focus === "function") firstInvalid.focus();
@@ -653,23 +681,25 @@
       };
 
       if (!FORM_ENDPOINT) {
-        const subject = "Заявка на финансирование — " + company;
+        const amountLabel = fields.amount.options[fields.amount.selectedIndex].text;
+        const sectorLabel = fields.sector.options[fields.sector.selectedIndex].text;
+        const subject = t("mail.subject", { company: company });
         const body = [
-          "Имя: " + name,
-          "Компания: " + company,
-          "Email: " + email,
-          "Телефон / Telegram: " + (phone || "не указан"),
-          "Сумма проекта: " + amount,
-          "Сектор: " + sector,
-          "О проекте: " + (message || "не указано"),
+          t("mail.name") + ": " + name,
+          t("mail.company") + ": " + company,
+          t("mail.email") + ": " + email,
+          t("mail.phone") + ": " + (phone || t("mail.notProvided")),
+          t("mail.amount") + ": " + amountLabel,
+          t("mail.sector") + ": " + sectorLabel,
+          t("mail.message") + ": " + (message || t("mail.notSpecified")),
           "",
-          "Отправлено с сайта Meridian 71."
+          t("mail.site")
         ].join("\n");
 
         const mailto = "mailto:invest.capital.center@gmail.com?subject=" + encodeURIComponent(subject) + "&body=" + encodeURIComponent(body);
         window.location.href = mailto;
         resetStatus();
-        if (status) status.textContent = "Открываем почтовый клиент. Если он не открылся, напишите на invest.capital.center@gmail.com.";
+        if (status) status.textContent = t("form.status.mailto");
         return;
       }
 
@@ -677,7 +707,7 @@
         submitButton.disabled = true;
         submitButton.setAttribute("aria-busy", "true");
       }
-      if (status) status.textContent = "Отправляем заявку…";
+      if (status) status.textContent = t("form.status.sending");
 
       fetch(FORM_ENDPOINT, {
         method: "POST",
@@ -688,11 +718,11 @@
           if (!response.ok) throw new Error("Request failed");
           form.reset();
           resetStatus();
-          if (status) status.textContent = "Спасибо. Заявка получена — мы вернёмся в течение двух рабочих дней.";
+          if (status) status.textContent = t("form.status.sent");
         })
         .catch(function () {
           if (status) {
-            status.textContent = "Не удалось отправить форму. Напишите нам напрямую на invest.capital.center@gmail.com.";
+            status.textContent = t("form.status.failed");
             status.classList.add("is-error");
           }
         })
