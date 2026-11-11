@@ -1,0 +1,54 @@
+CRESARIS GROUP — deployment manifest
+domain: https://cresaris.group
+languages: ru (default), en (?lang=en), kk/kz (?lang=kz)
+
+sha256                                                               bytes  path
+ed97f3331ea758fa959faaa4f67a10d5c80eb1d9058363d4b26f61623706dba2      3032  .htaccess
+1c53bb1626d27834bf5764ad6511b2d3df806982ea8db7d4c03f7ef6444c08b4     35072  assets/app.css
+819ed6d5dec759345ea8c9f06648bfef92cc803a810ee70bf1c638ce9db3ce6a       396  assets/favicon.svg
+f8c22ec1804bd6966b70f43ac7c327025645b4c09597117fca2a5a6c750106fe      6912  assets/fonts/ibm-plex-mono-400-cyrillic-ext.woff2
+7635422bd10ddbbcb0e0caa1154b928298f5c8319b8c00b30978d4395f4783ce      8356  assets/fonts/ibm-plex-mono-400-cyrillic.woff2
+6bc0f226a5b7884a8170e3f62c63d7675609d4631bdc5931b5cdab81821f00eb     13348  assets/fonts/ibm-plex-mono-400-latin-ext.woff2
+08949f728dc52d528e69b1667d15c89a5686a4ee9a296ff90983985f99c380f7     14708  assets/fonts/ibm-plex-mono-400-latin.woff2
+3febe5c7f22e4b07b4552738673c3dbe8bced2dc5f48b866edf7ccd9552d109a      6972  assets/fonts/ibm-plex-mono-500-cyrillic-ext.woff2
+1d89462e86cb8e87e7e9d6f6635605bd7c3081baca6caaecee84916bf7b60edc      8460  assets/fonts/ibm-plex-mono-500-cyrillic.woff2
+6bb06407c97584b0867a959e05e8874693bfeb8c317de190811c51598f2d99ea     13432  assets/fonts/ibm-plex-mono-500-latin-ext.woff2
+01d285447409c8a588692162439a038b8cbd7871309ee20267b0d2d91c6e8e22     14888  assets/fonts/ibm-plex-mono-500-latin.woff2
+7d0037a170882a49e65a45c38ef195237bb07b1cc791d078379f0ac0d7ae1935     23568  assets/fonts/ibm-plex-sans-400-cyrillic-ext.woff2
+9409ee21811f0f5272b7e1d828fe8838005b0573481ef906e7e55b63f6610ab0     29512  assets/fonts/ibm-plex-sans-400-cyrillic.woff2
+d160e20920ae4d6556518d352d3af27a74e9b0de3d8fe17b1c1044fc75aa2f81     30964  assets/fonts/ibm-plex-sans-400-latin-ext.woff2
+e2291e842cf5af167122a22881a740c7f2dda7716f1e8cd76680264f4a859470     45712  assets/fonts/ibm-plex-sans-400-latin.woff2
+7d0037a170882a49e65a45c38ef195237bb07b1cc791d078379f0ac0d7ae1935     23568  assets/fonts/ibm-plex-sans-500-cyrillic-ext.woff2
+9409ee21811f0f5272b7e1d828fe8838005b0573481ef906e7e55b63f6610ab0     29512  assets/fonts/ibm-plex-sans-500-cyrillic.woff2
+d160e20920ae4d6556518d352d3af27a74e9b0de3d8fe17b1c1044fc75aa2f81     30964  assets/fonts/ibm-plex-sans-500-latin-ext.woff2
+e2291e842cf5af167122a22881a740c7f2dda7716f1e8cd76680264f4a859470     45712  assets/fonts/ibm-plex-sans-500-latin.woff2
+7d0037a170882a49e65a45c38ef195237bb07b1cc791d078379f0ac0d7ae1935     23568  assets/fonts/ibm-plex-sans-600-cyrillic-ext.woff2
+9409ee21811f0f5272b7e1d828fe8838005b0573481ef906e7e55b63f6610ab0     29512  assets/fonts/ibm-plex-sans-600-cyrillic.woff2
+d160e20920ae4d6556518d352d3af27a74e9b0de3d8fe17b1c1044fc75aa2f81     30964  assets/fonts/ibm-plex-sans-600-latin-ext.woff2
+e2291e842cf5af167122a22881a740c7f2dda7716f1e8cd76680264f4a859470     45712  assets/fonts/ibm-plex-sans-600-latin.woff2
+6737de90a1acf5779c59625cf9f29aa8d31e969d8e2b1162926ef35d32e0bf03      8920  assets/fonts/ibm-plex-serif-400-cyrillic-ext.woff2
+1b706597c0169c04847649fe445491c73d674bdbfcf82b258d0ef1b59ade5f0d     12280  assets/fonts/ibm-plex-serif-400-cyrillic.woff2
+ae15cfd77c01a64fba7ba8a7d103a9af142260acf70e69cc61673dcef98b2099     10068  assets/fonts/ibm-plex-serif-400-italic-cyrillic-ext.woff2
+8fcac7ce093cbed5b49219d6fdd36ec79e56c3e846d6884ecc4f6b6c96d1eaea     14224  assets/fonts/ibm-plex-serif-400-italic-cyrillic.woff2
+68091cb647810f7ac24fb72fe7ac506ffc4769ef51435a87969345249fc7f035     16296  assets/fonts/ibm-plex-serif-400-italic-latin-ext.woff2
+d3f861b1ca55e50ca94de4c1756cb0d67c73de615172adf6b5b2078d939c723a     20900  assets/fonts/ibm-plex-serif-400-italic-latin.woff2
+8b4077bd28d36819590924090252e811d4d0b2c78cb4bf1e4abe46d7428a2781     15476  assets/fonts/ibm-plex-serif-400-latin-ext.woff2
+cb2c5eee2c0a43ff30d2365407c7bc8b20e3bd90720a4a64102ba0b328022a02     19580  assets/fonts/ibm-plex-serif-400-latin.woff2
+1ca6b912bb9b69cf4dac6cbf528382575d959655cc577b25f63f4198b3e88962      8740  assets/fonts/ibm-plex-serif-600-cyrillic-ext.woff2
+19e51b19bd700917b553ab861cc5a4d48362e090e9a0f538625428312f6f1853     12196  assets/fonts/ibm-plex-serif-600-cyrillic.woff2
+3c56fe27718921294dd8573acbe5a2822d34dd55f5313437514e8bb33e00a6b7     15560  assets/fonts/ibm-plex-serif-600-latin-ext.woff2
+e279e4f8baa0d4634d98868092f2198ae0dcd9e142c935822c385b9843352a9b     20516  assets/fonts/ibm-plex-serif-600-latin.woff2
+22ac59595d92f728fc74a4753a0164ff4176a81c890c35909af96329e30a1341     10690  assets/fonts.css
+6ae92e7856d1be91ccefb133957148984468b75295261d81f5ee7b3fc5adb638     28593  assets/i18n-dict.js
+977829bcbe437c77441f1e35d7795b38133c3910fad93bca29b6d2e9a1435e93      6817  assets/i18n.js
+bbe4dbffb768387e6a5dc381cb3298158775a1e23ed4ccd6959ac92cb1e123a6    344105  assets/og-image.png
+c4c7c240a8bd5f0bd3ebeb1c47381b88581e7a9ff0854bfe8a5624bfd9b6128a     21916  company.html
+db4f3faed5d4fba6c0c59f5639aedfa13abd7a6c52f21b506de3a296ae394947     26798  documents.html
+9891725ad45c863dffdb32b387db8a2b698a38904bd0e161a6a88df825af7374     34865  funds.html
+595d3733f9551cd751fc79a19eab748b9e2ee504db5ce4b781ec6c22a1f14024      9060  index.html
+f0835043d6a7cb3076029034d726100491b7667c208bd086afde87dce3af839c     61163  mechanics.html
+480a32320b789c7c15d6a7e04934b78bd4b903fb46adfd410be6cd49b03f9b54     24187  process.html
+481ca9d845af49ddab6f7eba690a700c2c1b8930b2b8cecf9870caf9544d265a        70  robots.txt
+e78e87e722b14b38e01d6abfc2a80ef9b147920adef7b8fb6bf2b098d1ee0b1f       443  sitemap.xml
+
+files: 47   bytes: 1258307   (1229 KiB)
